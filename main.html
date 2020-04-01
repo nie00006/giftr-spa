@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header data-state="person">
+        <h1>Giftr</h1>
+        <button id="add-btn">+ADD</button>
+    </header>
+
+    <main>
+
+        <div id="left">
+            <div id="person-list" class="">
+                <!-- --- -->
+                <div class="person-container">
+                    <span class="birth-date">Jan 1</span>
+                    <span class="person-name">person 1</span>
+                    <button class="delete-btn person-delete">Del</button>
+                </div>
+                <div class="person-container">
+                    <span class="birth-date">Jan 2</span>
+                    <span class="person-name">person 2</span>
+                    <button class="delete-btn person-delete">Del</button>
+                </div>
+                <!-- --- -->
+            </div>
+            <div id="person-selected" class="hide">
+                <span id="birth-date-selected">Jan 1</span>
+                <span id="person-name-selected">person 1</span>
+                <button id="home-btn">Back</button>
+            </div>
+        </div>
+            
+        <div id="right">
+
+            <div id="gift-list" class="hide">
+                <!-- --- -->
+                <div class="gift-container">
+                    <div class="required">
+                        <span class="gift-name">gift 1</span>
+                        <span class="gift-price">$111</span>
+                        <button class="delete-btn gift-delete">Del</button>
+                    </div>
+                    <div class="optional">
+                        <span class="store-name"></span>
+                        <a class="website" href="">www.111.com</a>
+                    </div>
+                </div>
+                <div class="gift-container">
+                    <div class="required">
+                        <span class="gift-name">gift 2</span>
+                        <span class="gift-price">$222</span>
+                        <button class="delete-btn gift-delete">Del</button>
+                    </div>
+                    <div class="optional">
+                        <span class="store-name"></span>
+                        <a class="website" href="">www.222.com</a>
+                    </div>
+                </div>
+                <!-- --- -->
+            </div>
+
+            <div id="person-form" class="hide">
+                <form class="person-form">
+                    <input id="person-name-input" type="text" placeholder="Person Name" />
+                    <input id="person-date-input" type="date" />
+                    <button id="person-save">save Person</button>
+                    <button id="person-cancel">Cancel</button>
+                </form>
+            </div>
+        
+            <div id="gift-form" class="hide">
+                <form class="gift-form">
+                    <input id="gift-name-input" type="text" placeholder="Gift Name" />
+                    <input id="gift-price-input" type="number" placeholder="$0.00" />
+                    <input id="gift-notes-input" type="text" placeholder="Optional Notes">
+                    <button id="gift-save">save Gift</button>
+                    <button id="gift-cancel">Cancel</button>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ------------------------------------------------ -->
+
+    <script src="main.js" type="module"></script>
+
+    <template id="person-List-template">
+        <div class="person-container">
+            <span class="person-date"></span>
+            <span class="person-name"></span>
+            <button class="delete-btn person-delete">Del</button>
+        </div>
+    </template>
+
+    <template id="gift-List-template">
+        <div class="gift-container">
+            <div class="required">
+                <span class="gift-name"></span>
+                <span class="gift-price"></span>
+                <button class="delete-btn gift-delete">Del</button>
+            </div>
+            <div class="optional">
+                <span class="gift-notes"></span>
+                <a class="website"></a>
+            </div>
+        </div>
+    </template>
+
+    
+</body>
+</html>
